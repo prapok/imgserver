@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 app.use(function (req, res, next) {
 
     // url allowed to access connection
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000' || 'https://match-cards.herokuapp.com');
 
     // request method
     res.setHeader('Access-Control-Allow-Methods', 'GET');  
