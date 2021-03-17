@@ -38,7 +38,7 @@ app.get('/getGameConfig/:count', (req, res) => {
     let result = [];
     for(let i = 0; i < count; i++) {
         result.push({
-            url: `https://match-cards.herokuapp.com/svg/${ Math.ceil(Math.random() * 1000)}/170`,
+            url: `https://tesimg-server.herokuapp.com/svg/${ Math.ceil(Math.random() * 1000)}/170`,
             name: i
         })
     }
