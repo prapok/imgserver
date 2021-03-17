@@ -11,8 +11,8 @@ app.get('/', (req, res) => {
 //http request(req), respsone(res) and next (middleware arg)
 app.use(function (req, res, next) {
 
-    // url allowed to access connection
-    res.setHeader('Access-Control-Allow-Origin', 'https://match-cards.herokuapp.com' || 'http://localhost:3000');
+    // url allowed to access connection or http://localhost:3000
+    res.setHeader('Access-Control-Allow-Origin', 'https://match-cards.herokuapp.com');
 
     // request method
     res.setHeader('Access-Control-Allow-Methods', 'GET');  
@@ -38,7 +38,7 @@ app.get('/getGameConfig/:count', (req, res) => {
     let result = [];
     for(let i = 0; i < count; i++) {
         result.push({
-            url: `http://localhost:8111/svg/${ Math.ceil(Math.random() * 1000)}/170` || `https://match-cards.herokuapp.com/svg/${ Math.ceil(Math.random() * 1000)}/170`,
+            url: `https://match-cards.herokuapp.com/svg/${ Math.ceil(Math.random() * 1000)}/170`,
             name: i
         })
     }
