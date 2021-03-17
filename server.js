@@ -2,7 +2,11 @@ const express = require('express');
 const jdenticon = require('jdenticon');
 
 const app = express();
-const port = 8111;
+let port = process.env.PORT || 8111;
+
+app.get('/', (req, res) => {
+   res.send("Example Image Server");
+});
 
 //http request(req), respsone(res) and next (middleware arg)
 app.use(function (req, res, next) {
