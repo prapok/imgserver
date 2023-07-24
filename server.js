@@ -2,7 +2,7 @@ const express = require('express');
 const jdenticon = require('jdenticon');
 
 const app = express();
-let port = process.env.PORT || 8111;
+let port = Deno.env.get("PORT") || 8111;
 
 app.get('/', (req, res) => {
    res.send("Example Image Server");
